@@ -1,0 +1,536 @@
+
+
+For opening
+kex --win
+Win-KeX (kex) is a tool developed by Kali Linux to give you a full Kali Linux GUI desktop inside Windows using WSL2.
+
+give password
+
+kali will open 
+
+WSL - windows subsystem Linux
+
+whoami  give user name
+hostname  give hostname
+
+~ tild home directory
+
+sudo su
+give password
+change to root directory
+
+su -l username
+switch to another login l na logic
+change to home directory
+
+pwd print working directory
+
+sudo apt install
+super user do run the command with root
+install all package
+
+apt 
+advanced package tool
+run apt package manager commands as an administrator
+
+sudo apt update
+refresh the list of available software package
+
+sudo apt upgrade
+install all latest updates for existing package
+
+ls list all files
+
+ls -l
+owner group  file type  file name   modified date time  file size
+-    regular file
+rw-r--r--   permission
+1 number of links 
+user   owner
+user  group
+1024   size in bytes
+jan 10 date and time
+file.txt   file name
+
+cd  change directory
+
+cd .. back 
+
+mkdir  make directory like folder
+
+
+touch "filename"
+is used to create a file
+
+rm file name
+remove the certain file
+
+mv move your file
+filename ~/-------
+
+mv src location target location
+to move a folder
+mv new Downloads/
+
+cp 
+copy
+cp original file copied file
+
+cp h.txt new/
+copy file to another folder
+
+nano and echo
+add text
+nano filename
+ctrl + x 
+then y
+enter
+
+
+rmdir
+remove your empty folder
+
+if in case you have any file in that folder it wont delete
+so
+rm -r folder name
+r - recursive
+
+clear
+clear the entire data
+
+ifconfig
+eth0 ethernet interface 0
+lo loopback
+eth0	Your phone’s SIM network or Wi-Fi	Connects to outside world
+lo	Talking to yourself	Internal communication
+
+ip a 
+Show all IP addresses and network interfaces on your Linux system.
+
+lo
+Loopback
+IP: 127.0.0.1
+Computer talking to itself
+
+eth0 / wlan0
+Network card (Ethernet or Wi-Fi)
+Shows your real IP
+Used for internet connection
+
+IP addresses
+inet   internet network
+inet → IPv4
+inet6 → IPv6
+
+MAC address
+MAC Address = Unique ID of your network card.
+
+Your phone has a IMEI number →
+Your laptop/PC has a MAC address.
+
+Media → Network medium (Wi-Fi/Ethernet)
+Access → Permission to use the network
+Control → Rules to identify your device
+
+Starts with: link/ether
+
+Interface status
+UP → Active
+DOWN → Not active
+
+ping web address
+Ping = A command used to check if another device is reachable on the network.
+ping google.com
+
+
+for phishing attack
+
+sudo apt install
+password
+sudo apt install php git curl wget -y
+
+php	A programming language used for web development (server-side scripting).
+git	Version control system used to track changes in code (used in GitHub).
+curl	Tool to send/receive data from the internet (APIs, downloads).
+wget	Download files from the internet through terminal.
+
+Automatically answers “yes” to installation prompts
+
+git clone zhisherlink form GitHub
+https://github.com/htr-tech/zphisher.git
+
+cd zphisher
+
+ls
+
+sh file
+bash zphisher.sh
+bash → Tells Linux to run a bash script.
+
+zphisher.sh → This is the script file.
+.sh file = Shell Script
+It contains commands that run automatically one by one.
+
+
+localhost → Your PC personal check we cannot send the link to anybody
+
+cloudflared → Tunnel secret we can send the link
+
+localxpose → Public link we can send  (15 min)
+
+
+
+NIST
+NIST → National Institute of Standards and Technology
+
+Identify – Know what you must protect
+Protect – Apply security controls
+Detect – Catch attacks early
+Respond – Take action during attack
+Recover – Fix system after attack
+
+MITRE
+MITRE → MIT Research Engineering
+
+Reconnaissance (Information Gathering) Collect information about the target.
+Scanning   Identify vulnerabilities in the target.
+Gaining Access (Exploitation)   Break into the system.
+Maintaining Access    Stay inside the system without getting detected.
+Covering Tracks      Hide evidence so no one knows the attacker was there.
+
+NIST teaches students how to secure systems
+MITRE teaches them how attackers actually break in.
+
+Google Colab (Google Colaboratory) is a free, cloud-based platform provided by Google that lets you write 
+and run Python code in your browser — with no installation required.
+
+
+
+python
+List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered** and changeable. No duplicate members.
+
+numpy
+numerical python
+python library 
+working with array
+fast as list
+
+
+import numpy as np
+arr=np.array([1,2,3,4])
+print(arr)
+
+arr=np.array([[1,2,3],[4,5,6]])
+print(arr)
+
+arr=np.arange(10)
+print(arr)
+
+arr=np.arange(12)
+rearr=np.reshape(arr,(3,4))
+print(rearr)
+
+arr=np.array([[1,2,3],[4,5,6]])
+traarr=np.transpose(arr)
+print(traarr)
+
+a=np.array([1,2,3,4])
+b=np.array([1,2,3,4])
+print(a+b)
+
+
+a=np.array([1,3,4])
+b=np.array([1,2,3,4])
+print(a+b)  error because of size mismatch
+
+a=np.array([1,3,4])
+print(a.ndim)
+
+
+a=np.array([[1,3,4],[3,4,5]])
+print(a.ndim)
+
+a=np.array([1,3,4,6])
+b=np.array([1,2,3,4])
+print(a+b)
+print(a*b)
+print(a/b)
+
+	
+print(a.sum())
+print(a.mean())
+print(a.min())
+print(a.max())
+
+slicing
+arr=np.array([1,2,3,4,5,6,7,8,9,10])
+print(arr[1:2])
+
+arr=np.array([1,2,3,4,5,6,7,8,9,10])
+print(arr[1:4])
+
+
+a=np.array(["mango","orange","Apple"])
+print(np.sort(a))
+
+pandas
+A DataFrame = 2D data table used for storing and analyzing data.
+
+from google.colab import files
+import files from our pc
+files  is module from google colab 
+
+data=files.upload()
+just upload file in a variable data
+
+data = pd.read_excel(r'customer.xlsx')
+just read the data in excel
+
+and print data
+no need to use print just give variable name
+nospace between r and file name
+
+df=pd.DataFrame(data)
+frame the data
+
+
+df.info()  collect the info
+
+.describe() output, which summarizes statistics for two numeric columns.
+std Standard deviation — how spread out the values are
+
+df.isnull()
+if i have blank it will show true
+
+df.isnull().sum() it will give blank in numeric value
+
+df.duplicated() find duplicate
+
+df.drop_duplicates(inplace=True)
+just remove the dupliates and update
+
+df.dropna()
+just remove the balnk row or NaN 
+
+df.fillna("no value")
+it will fill no value message in NaN or blank
+
+
+while giving inplace just give proper once you give it cant be changed
+
+
+avg=df['Cost'].mean()
+df['Cost'].fillna(avg,inplace=True)
+missing values in the Cost column by replacing them with the average (mean) of that column.
+Replaces all NaN values in the Cost column with the computed mean.
+inplace=True updates the DataFrame directly (no need to assign back).
+
+Import pandas
+import pandas as pd
+This loads the pandas library so you can work with DataFrames.
+
+2.Upload file in Google Colab
+from google.colab import files
+data = files.upload()
+
+
+This opens a file upload box in Colab so you can upload data.xlsx (or any file).
+
+3. Read Excel file
+data = pd.read_excel('data.xlsx')
+
+
+This reads the uploaded file into a pandas DataFrame.
+
+
+You do NOT need r'' because the file is in the same directory.
+
+4. Convert to DataFrame (not needed actually)
+df = pd.DataFrame(data)
+
+
+read_excel() already gives you a DataFrame, so this step is optional.
+
+5. Show info
+df.info()
+
+
+Shows:
+
+Column names
+
+Data types
+
+Number of rows
+
+Missing values
+
+6. Show statistics
+df.describe()
+
+
+Shows statistics for numeric columns:
+
+mean
+
+std
+
+min
+
+max
+
+percentiles
+
+
+
+Here is a cleaner version you can use:
+
+import pandas as pd
+from google.colab import files
+
+# Upload file
+uploaded = files.upload()
+
+# Read Excel file directly
+df = pd.read_excel(list(uploaded.keys())[0])
+
+df.info()
+df.describe()
+
+
+Checking Missing & Duplicate Values
+df.isnull().sum()
+df.duplicated().sum()
+
+
+Shows how many missing values
+Shows how many duplicate rows
+
+2. Removing Duplicates
+df.drop_duplicates(inplace=True)
+
+
+Removes duplicate rows permanently (because inplace=True)
+
+3. Removing & Filling Missing Values
+Remove NA rows
+df.dropna()
+
+
+This does NOT change the DataFrame unless you use:
+
+df.dropna(inplace=True)
+
+Fill all missing values with text
+df.fillna("no data")
+
+
+Does NOT change DataFrame unless:
+
+df.fillna("no data", inplace=True)
+
+Fill Age missing values with its mean
+avg = df['Age'].mean()
+df['Age'].fillna(avg, inplace=True)
+
+Fill Marks missing values with zero
+df['Marks'].fillna(0, inplace=True)
+
+Replace remaining missing values
+df.fillna("No name", inplace=True)
+
+4. Save cleaned DataFrame to CSV
+df.to_csv("output.csv", index=False)
+files.download("output.csv")
+
+
+Exports cleaned data
+Downloads CSV in Google Colab
+
+5. Plots
+Scatter Plot
+plt.scatter(df['City'], df['Marks'], color='red')
+
+
+Scatter with City (categorical) is allowed, but points overlap.
+
+Bar Plot
+plt.bar(df['City'], df['Age'], color='red')
+
+Histogram
+plt.hist(df['Age'], color='red', bins=3)
+
+Line Plot
+plt.plot(df['Name'], df['Age'], color='red')
+
+Pie Chart
+plt.pie(df['Age'], labels=df['City'])
+
+6. Dashboard (Multiple Plots)
+
+Your layout is correct, but adding titles helps.
+
+Corrected Dashboard Version
+plt.figure(figsize=(10,8))
+plt.suptitle("Fraud Analysis")
+
+# Bar Chart
+plt.subplot(2,2,1)
+plt.bar(df['City'], df['Marks'])
+plt.title("City vs Marks")
+
+# Line Plot
+plt.subplot(2,2,2)
+plt.plot(df['City'], df['Marks'])
+plt.title("City vs Marks (Line)")
+
+# Scatter
+plt.subplot(2,2,3)
+plt.scatter(df['Age'], df['Marks'])
+plt.title("Age vs Marks")
+
+# Histogram
+plt.subplot(2,2,4)
+plt.hist(df['Age'], bins=5)
+plt.title("Age Distribution")
+
+plt.tight_layout()
+plt.savefig("dashboard.png")
+plt.show()
+
+files.download("dashboard.png")
+
+
+plt.figure(figsize=(10,8))
+plt.suptitle(" fraud Analysis")
+plt.subplot(2,2,1)
+plt.bar(df['City'], df['Marks'])
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.subplot(2,2,2)
+plt.plot(df['City'], df['Marks'])
+plt.xticks(rotation=45, ha='right')
+plt.tight_layout()
+plt.subplot(2,2,3)
+plt.scatter(df['Age'], df['Marks'])
+plt.subplot(2,2,4)
+plt.hist(df['Age'], bins=5)
+plt.tight_layout()
+
+plt.savefig('dashboard.png')
+plt.show()
+
+files.download('dashboard.png')
+
+
+plt.xticks()
+
+Used to modify the style of x-axis tick labels.
+rotation=45
+This rotates all x-axis labels 45 degrees.
+Helps to avoid overlap and makes them readable.
+ha='right'
+ha = horizontal alignment

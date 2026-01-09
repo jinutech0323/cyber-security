@@ -1,0 +1,71 @@
+1.Error: 
+kex: command not found
+Reason: Win-KeX is not installed.
+Solution: Install Win-KeX
+
+Run:
+
+sudo apt update
+sudo apt install kali-win-kex
+
+
+Then start:
+
+kex --win
+
+2. Error: Black Screen / GUI not opening
+Reason: Your WSL is NOT WSL2 (Win-KeX requires WSL2).
+Solution: Upgrade WSL1 → WSL2
+Step 1: Check WSL version
+
+PowerShell (Admin):
+
+wsl -l -v
+
+
+If Kali shows Version 1, then upgrade.
+
+Step 2: Set WSL2 as default
+wsl --set-default-version 2
+
+Step 3: Convert Kali to WSL2
+wsl --set-version kali-linux 2
+
+
+(Replace kali-linux with the name shown in wsl -l if different.)
+
+After conversion:
+kex --win
+
+3. Error: No GUI / Missing dependencies
+Reason: Required GUI packages not installed or broken updates.
+Solution: Install/Repair GUI packages
+Step 1: Install desktop packages
+sudo apt update
+sudo apt install kali-desktop-xfce
+
+Step 2: Install Win-KeX dependencies
+sudo apt --fix-broken install
+sudo apt install xrdp dbus-x11 tigervnc-standalone-server
+
+Step 3: Start Win-KeX
+kex --win
+
+Advanced Fix (If still not working)
+Reset Win-KeX configuration:
+
+kex --stop
+rm -rf ~/.vnc
+kex --win
+
+
+
+Tell students:
+
+If terminal says “command not found” → You forgot to install it
+
+If screen is black → Your engine (WSL2) is too old
+
+If GUI doesn’t load → Some parts of the desktop are missing
+
+Simple, clear, and they will understand instantly.

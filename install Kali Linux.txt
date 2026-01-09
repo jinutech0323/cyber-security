@@ -1,0 +1,101 @@
+Method 1: Directly install Kali Linux using command
+
+Open PowerShell (Run as Administrator) and run:
+
+wsl --install -d kali-linux
+
+
+This will:
+✔ Install WSL
+✔ Install Kali Linux
+✔ Configure everything automatically
+
+After installation, launch Kali:
+
+kali
+
+Method 2: If WSL is already installed
+
+Just install Kali:
+
+wsl --install -d kali-linux
+
+
+OR
+
+wsl --import kali-linux
+
+Method 3: List all available distros
+
+If you want to check what Linux versions are available in Microsoft Store:
+
+wsl --list --online
+
+
+You will see:
+
+Ubuntu
+
+Kali-Linux
+
+Debian
+
+Fedora
+
+etc.
+
+🔥 After installing Kali, set it to WSL2
+wsl --set-default-version 2
+
+
+Then:
+
+wsl --set-version kali-linux 2
+
+
+
+Install WSL (One command)
+wsl --install
+
+
+This command will automatically:
+
+Enable WSL
+
+Install Virtual Machine Platform
+
+Enable required features
+
+Download default Linux (Ubuntu)
+
+Set WSL2 as default
+
+3. Restart your PC
+
+WSL needs one restart.
+
+If you want Kali instead of Ubuntu
+
+Run:
+
+wsl --install -d kali-linux
+
+Check WSL status
+
+To confirm installation:
+
+wsl -l -v
+
+
+If WSL is not recognized (older Windows 10 versions)
+
+Run:
+
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+
+Then restart and run:
+
+wsl --set-default-version 2
+
